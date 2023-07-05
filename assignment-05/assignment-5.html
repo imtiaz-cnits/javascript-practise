@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practices 05</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="font-family: 'Trebuchet MS', sans-serif; text-align: center;">
+    <img class="js-img" src="./pngegg.png" alt="">
+
+    <div class="header">
+        <img src="./cnits-logo-main.png" alt="">
+        <h1>Javascript Assignment 05</h1>
+    </div>
+    <hr>
+
+    <!-- JavaScript Objects -->
+    <h3>JavaScript Objects</h3>
+    <p id="obj"></p>
+
+    <br><br>
+
+    <!-- Object Definition -->
+    <h3>Object Definition</h3>
+    <p>Spaces and line breaks are not important. An object definition can span multiple lines:</p>
+    <p id="obj-def"></p>
+
+    <br><br>
+    <!-- Accessing Object Methods -->
+    <h3>Accessing Object Methods</h3>
+    <p>An object method is a function definition, stored as a property value.</p>
+    <p id="obj-method"></p>
+
+    <br><br><br>
+    <!-- JavaScript HTML Events -->
+    <h3>JavaScript HTML Events</h3>
+    <p>In the next example, the code changes the content of its own element (using this.innerHTML):</p>
+    <button onclick="this.innerHTML=Date()">Show Date</button>
+
+
+    <br><br><br>
+
+    <script>
+        // JavaScript Objects
+        const car = {type:"BMW", model:"B-500", color:"black"};
+        document.getElementById('obj').innerHTML="The car is " + car.type + " " + car.model;
+
+        // Object Definition
+        const person = {
+            firstName: "Rahat",
+            lastName: "Malitha",
+            age: 23,
+            eyeColor: "Brown"
+        };
+        // Display some data from the object:
+        document.getElementById('obj-def').innerHTML=
+        person.firstName + " is " + person.age + " years " + " old ";
+
+        // Accessing Object Methods
+        const birds = {
+            name: "Magpie",
+            species: "Bengal",
+            color: "black",
+            weight: 50,
+            fullName: function() {
+                return this.name + " " + this.species;
+            }
+        }
+
+        document.getElementById('obj-method').innerHTML=
+        "Our National bird is " + birds.fullName();
+        
+
+    </script>
+
+</body>
+
+</html>

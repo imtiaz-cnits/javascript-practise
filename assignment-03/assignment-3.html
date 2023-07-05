@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practices 03</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="font-family: 'Trebuchet MS', sans-serif; text-align: center;">
+    <img class="js-img" src="./pngegg.png" alt="">
+
+    <div class="header">
+        <img src="./cnits-logo-main.png" alt="">
+        <h1>Javascript Assignment 03</h1>
+    </div>
+    <hr>
+
+    <!-- Js addition assignment operator -->
+    <h3>Js addition assignment operator (=+)</h3>
+    <p id="add-asg"></p>
+
+    <br><br>
+
+    <!-- Js Incrementing and Decrementing -->
+    <h3>Js Incrementing and Decrementing</h3>
+    <p>The increment operator (++) increments numbers</p>
+    <p id="incre"></p>
+    <p>The decrement operator (--) decrements numbers.</p>
+    <p id="decre"></p>
+
+    <br><br>
+    <!-- Js Exponentiation -->
+    <h3>Js Exponentiation</h3>
+    <p>The exponentiation operator (**) raises the first operand to the power of the second operand.</p>
+    <p id="exp"></p>
+
+    <br><br>
+    <!-- JavaScript Operator Precedence -->
+    <h3>JavaScript Operator Precedence</h3>
+    <img src="./Screenshot_3.png" alt="" width="60%">
+    <img src="./Screenshot_1.png" alt="" width="60%">
+    <img src="./Screenshot_2.png" alt="" width="60%">
+
+
+    <br><br><br>
+
+    <script>
+        // Js addition assignment operator
+        let text1 = "Rahat";
+        text1 += " is a Web Developer";
+        document.getElementById('add-asg').innerHTML = text1;
+
+        // Js Incrementing
+        let p = 8;
+        p++;
+        r = p;
+        document.getElementById('incre').innerHTML = r;
+        //Js Decrementing
+        let k = 5;
+        k--;
+        l = k;
+        document.getElementById('decre').innerHTML = l;
+
+        // Js Exponentiation
+        let q = 7;
+        document.getElementById('exp').innerHTML = q ** 2;
+
+    </script>
+
+</body>
+
+</html>

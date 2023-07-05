@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practices 06</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="font-family: 'Trebuchet MS', sans-serif; text-align: center;">
+    <img class="js-img" src="./pngegg.png" alt="">
+
+    <div class="header">
+        <img src="./cnits-logo-main.png" alt="">
+        <h1>Javascript Assignment 06</h1>
+    </div>
+    <hr>
+
+    <!-- JavaScript Strings -->
+    <h3>JavaScript Strings</h3>
+    <p>The escape sequence \" inserts a double quote in a string.</p>
+    <p id="esc-str"></p>
+
+    <br><br>
+    <!-- JavaScript String slice() -->
+    <h3>JavaScript String slice()</h3>
+    <p>The slice() method extract a part of a string and returns the extracted parts in a new string:</p>
+    <p id="slice"></p>
+
+    <br><br>
+    <!-- JavaScript String substring() -->
+    <h3>JavaScript String substring()</h3>
+    <p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+    <p id="sub-str"></p>
+
+    <br><br>
+    <!-- JavaScript String substr() -->
+    <h3>JavaScript String substr()</h3>
+    <p>The substr() method extract a part of a string and returns the extracted parts in a new string:</p>
+    <p id="popper"></p>
+
+    <br><br>
+    <!-- Replacing String Content -->
+    <h3>Replacing String Content</h3>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <button onclick="strFunction()">Click To Replace</button>
+    <p id="rep-str">We are from 'Pabna'</p>
+
+    <br>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <button onclick="caseSense()">Try to Change</button>
+    <p id="case-rep">Visit website of CodeNext!</p>
+
+    <br><br>
+
+    <p id="p">Hello World</p>
+
+    <!-- JavaScript String toUpperCase() -->
+    <h3>JavaScript String toUpperCase()</h3>
+    <p>Convert string to upper case:</p>
+    <button onclick="textUp()">Click to Transform</button>
+    <p id="upper-case">I Love JavaScript</p>
+
+
+
+    <br><br><br>
+
+    
+    <script>
+        // The escape sequence
+        let txt = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById('esc-str').innerHTML = txt;
+
+        // JavaScript String slice
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById('slice').innerHTML = str.slice(3, 15);
+
+        // JavaScript String substring
+        let cars = "BMW, Volvo, Nissan";
+        document.getElementById('sub-str').innerHTML = cars.substring(5, 15);
+
+        // JavaScript String substr()
+        let birds = "Magpie, Parrot, Crow";
+        document.getElementById('popper').innerHTML = birds.substr(8, 6);
+
+        // Replacing String Content
+        function strFunction() {
+            let view = document.getElementById('rep-str').innerHTML;
+            document.getElementById('rep-str').innerHTML=
+            view.replace('Pabna', 'CodeNext IT');
+        }
+
+        function caseSense() {
+            let letterSense = document.getElementById('case-rep').innerHTML;
+            document.getElementById('case-rep').innerHTML=letterSense.replace(/CODENEXT/i, "EduNext");
+        }
+
+        // JavaScript String toUpperCase
+        function textUp() {
+            let upclass = document.getElementById('upper-case').innerHTML;
+            document.getElementById('upper-case').innerHTML=upclass.toUpperCase();
+        }
+
+        const getStyle = (el, ruleName) => getComputedStyle(el)[ruleName];
+        getStyle(document.querySelector('p'), '16px'); // '16px'
+
+    </script>
+
+</body>
+
+</html>

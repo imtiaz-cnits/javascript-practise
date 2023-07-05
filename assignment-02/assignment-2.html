@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practices 02</title>
+
+    <style>
+        body img {
+            position: absolute;
+            background-size: 800px;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            top: 30%;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Trebuchet MS', sans-serif; text-align: center;">
+
+    <img src="./pngegg.png" alt="">
+
+    <h1>Javascript Assignment 02</h1>
+    <hr>
+
+    <!-- Variables with var keyword -->
+    <h3>Variables with var keyword</h3>
+    <p id="var-key"></p>
+
+    <br><br>
+
+    <!-- Use JavaScript const keyword -->
+    <h3>Use JavaScript const keyword</h3>
+    <p id="const-key"></p>
+
+    <br><br>
+
+    <!-- Declaring a JavaScript Variable -->
+    <h3>Declaring a JavaScript Variable</h3>
+    <p id="var-dec"></p>
+
+    <br><br>
+
+    <!-- One Statement, Many Variables -->
+    <h3>One Statement, Many Variables</h3>
+    <p id="osmv"></p>
+
+    <br><br>
+
+    <!-- var keyword Hoisting -->
+    <h3>var keyword Hoisting</h3>
+    <p><span style="background-color: rgb(255, 207, 207);">var</span> keyword supports hoisting</p>
+    <p id="hoist"></p>
+
+    <br><br>
+
+    <!-- Changing const arrays and elements -->
+    <h3>Changing const arrays and elements</h3>
+    <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+    <p id="const-array"></p>
+
+    <br><br><br><br><br><br>
+
+    <script>
+        // Variables with var keyword
+        var q = 7;
+        var w = 4;
+        var e = q + w;
+        document.getElementById('var-key').innerHTML = "Value of e is: " + e;
+
+        // Use JavaScript const keyword
+        const price1 = 6;
+        const price2 = 9;
+        let total = price1 + price2;
+        document.getElementById('const-key').innerHTML = 'The Const Total is =' + total;
+
+        // Declaring a JavaScript Variable
+        let carName = "Volvo";
+        document.getElementById('var-dec').innerHTML = carName;
+
+        // One Statement, Many Variables
+        let person = "Rahat",
+            carname = "BMW",
+            price = 350;
+        document.getElementById('osmv').innerHTML = person;
+
+        // var keyword Hoisting
+        cityName = "Dhaka";
+        document.getElementById('hoist').innerHTML = cityName;
+        var cityName;
+
+        // Changing const arrays and elements
+        const cars = ["BMW", " Lamborghini", " Mclaren"]; //declaring a const array
+        cars[0] = " Porsche"; //replacing array value
+        cars.push(" Honda"); //adding item in array
+        document.getElementById('const-array').innerHTML = cars;
+    </script>
+
+</body>
+</html>

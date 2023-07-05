@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practices 04</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="font-family: 'Trebuchet MS', sans-serif; text-align: center;">
+    <img class="js-img" src="./pngegg.png" alt="">
+
+    <div class="header">
+        <img src="./cnits-logo-main.png" alt="">
+        <h1>Javascript Assignment 04</h1>
+    </div>
+    <hr>
+
+    <!-- Concept of Data Types -->
+    <h3>Concept of Data Types</h3>
+    <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+    <br>
+    <p><b>Numbers First</b></p>
+    <p id="numf"></p>
+    <p><b>String First</b></p>
+    <p id="strf"></p>
+
+    <br><br>
+
+    <!-- JavaScript Booleans -->
+    <h3>JavaScript Booleans</h3>
+    <p id="bools"></p>
+
+    <br><br>
+
+    <!-- JavaScript Functions -->
+    <h3>JavaScript Functions</h3>
+    <p>This example calls a function which performs a calculation, and returns the result:</p>
+    <p id="func"></p>
+
+    <br><br>
+
+    <!-- Fahrenheit to Celsius Converter -->
+    <h3>Fahrenheit to Celsius Converter</h3>
+    <p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+    <p id="temp"></p>
+
+
+    <br><br><br>
+
+    <script>
+        // Concept of Data Types
+        let x = 14 + 7 + "Rahat";
+        document.getElementById('numf').innerHTML = x;
+
+        let y = "Robi" + 15 + 5;
+        document.getElementById('strf').innerHTML = y;
+
+        // JavaScript Booleans
+        let a = 6;
+        let b = 4;
+        let c = 6;
+        document.getElementById('bools').innerHTML = (a == c) + "<br>" + (b == c);
+
+        // JavaScript Functions
+        function imtiaz(e1, e2) {
+            return e1 * e2;
+        }
+        document.getElementById('func').innerHTML = imtiaz(7, 9);
+
+        // Fahrenheit to Celsius Converter
+        function toCelsius(f) {
+            return (5/9) * (f-32);
+        }
+        document.getElementById('temp').innerHTML = 
+        toCelsius(77);
+
+    </script>
+
+</body>
+
+</html>

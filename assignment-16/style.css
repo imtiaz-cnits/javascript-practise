@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+* {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+}
+
+.js-img {
+    position: absolute;
+    background-size: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    top: 30%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 150px;
+    height: 60px;
+}
+
+.header h1 {
+    margin-left: 430px;
+}

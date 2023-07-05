@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practise</title>
+</head>
+
+<body style="font-family: 'Trebuchet MS', sans-serif; text-align: center; background-color: rgb(240, 252, 255);">
+
+    <h1>Javascript Assignment 01</h1>
+    <hr>
+
+    <!-- Date And Time Showing JS -->
+    <h3>Showing Date Time by Clicking Button</h3>
+    <button type="button" onclick="document.getElementById('datetime').innerHTML = Date()">Click Here to Show Date and
+        Time</button>
+    <p id="datetime"></p>
+
+    <br>
+
+    <!-- Changing HTML Content -->
+    <h3>Changing HTML Content</h3>
+    <p id="change" style="color: Tomato; font-size: 15px;">Click the button to show Changing Text</p>
+    <button type="button" onclick="document.getElementById('change').innerHTML='Here is the Javascript Text'">Click
+        Here</button>
+
+    <br><br>
+
+    <!-- JS Light Bulb On Off -->
+    <h3>JS Light Bulb On Off</h3>
+    <button type="button" onclick="document.getElementById('bulbimage').src='./img/pic_bulbon.gif'">Turn On
+        Bulb</button>
+    <img id="bulbimage" src="./img/pic_bulboff.gif" alt="">
+    <button type="button" onclick="document.getElementById('bulbimage').src='./img/pic_bulboff.gif'">Turn Off
+        Bulb</button>
+
+    <br><br><br>
+
+    <!-- Text Size change -->
+    <h3>Text Size change</h3>
+    <p id="textsize">This text size will get bigger when clicking button</p>
+    <button type="button" onclick="document.getElementById('textsize').style.fontSize='30px'">Get Big Text</button>
+
+    <br><br><br>
+
+    <!-- Button for Print Dialouge -->
+    <h3>Button for Print Dialouge</h3>
+    <button type="button" onclick="window.print()">Print This Page</button>
+
+    <br><br><br>
+
+    <!-- Javascript Statements -->
+    <h3>Javascript Statements</h3>
+    <p>Here showing a, b, c value addition 8 + 7 = 15</p>
+    <span id="statements" style="background-color: Powderblue;padding: 10px;"></span>
+
+    <br><br><br>
+
+    <!-- Javascript Codeblock or Function -->
+    <h3>Javascript Codeblock or Function</h3>
+    <button type="button" onclick="function1()">Click the Button</button>
+
+    <p id="func-1"></p>
+    <p id="func-2"></p>
+
+    <br><br><br>
+
+    <!-- Javascript String Addition -->
+    <h3>Javascript String Addition</h3>
+    <p>We are adding two strings</p>
+    <h4 id="str-add"></h4>
+
+    <br><br><br><br><br><br>
+
+    <!-- ============JS Code Lines============== -->
+    <script>
+        console.log('Imtiaz')
+        // window.alert("Imtiaz Ahmed")
+
+        // Javascript Statements
+        let a, b, c;
+        a = 8;
+        b = 7;
+        c = a + b;
+        document.getElementById('statements').innerHTML = c;
+
+        // Javascript Codeblock or Function
+        function function1() {
+            document.getElementById('func-1').innerHTML = "Function 1";
+            document.getElementById('func-2').innerHTML = "Function 2";
+        }
+
+        // Javascript String Addition
+        document.getElementById('str-add').innerHTML = "Imtiaz" + " " + "Ahmed";
+    </script>
+
+</body>
+
+</html>

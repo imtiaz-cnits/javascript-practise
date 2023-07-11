@@ -33,8 +33,7 @@ orange = temp;
 
 console.log(apple, orange);
 
-console.log(apple); 
-
+console.log(apple);
 
 //if else condition
 let number = 0;
@@ -46,3 +45,26 @@ if (number > 0) {
 } else {
   console.log("This is Zero Number");
 }
+
+//switch condition
+let color = "red";
+
+switch (color) {
+  case "black":
+    console.log("This is black color");
+    break;
+
+  case "white":
+    console.log("This is white color");
+    break;
+
+  case "red":
+    console.log("This is red color");
+    break;
+}
+
+//ternary operator
+let point1 = 30;
+let point2 = 18;
+
+

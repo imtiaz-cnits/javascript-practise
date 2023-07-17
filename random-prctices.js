@@ -67,4 +67,40 @@ switch (color) {
 let point1 = 30;
 let point2 = 18;
 
+let maxNum = point1 > point2 ? point1 : point2;
+
+console.log(maxNum);
+
+
+//Problem FizzBuzz
+//Take a number
+//If it is divisible by 3, then print Fizz
+//If it is divisible by 5, then print Buzz
+//If it is divisible by 3 & 5, then print FizzBuzz
+//otherwise print nothing
+
+let put = 15;
+
+// if (put % 3 === 0 && put % 5 === 0){
+// console.log('FizzBuzz');
+// } else if (put % 3 === 0) {
+// console.log('Fizz');
+// } else if (put % 5 === 0) {
+//   console.log('Buzz');
+// } else {
+//   console.log('Nothing');
+// };
+
+//FizzBuzz with Ternary operator
+
+console.log(
+  put % 3 === 0 && put % 5 === 0
+  ? "FizzBuzz"
+  : put % 3 === 0
+  ? "Fizz"
+  : put % 5 === 0
+  ? "Buzz"
+  : "Nothing"
+
+  );
 

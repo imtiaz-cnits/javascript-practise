@@ -28,3 +28,25 @@ if (mark < 0 || mark > 100) {
 } else {
     console.log("F");
 };
+
+
+// Take a Number
+// check condition of number > 0
+// check condition of number === 0
+// check condition of number < 0
+
+let cond = 0;
+
+switch(true) {
+    case cond > 0:
+        console.log("This is positive number");
+        break;
+
+    case cond === 0:
+        console.log("This is Zero number");
+        break;
+
+    case cond < 0:
+        console.log("This is negative number");
+        break;
+}

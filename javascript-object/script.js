@@ -122,3 +122,16 @@ for (let key in data) {
 // const cloneData = Object.assign({}, data);
 
 console.log(cloneData);
+
+// JSON Data Format
+const data2 = {
+  name: "Fahad",
+  age: 5,
+};
+
+// Normal to JSON
+const jsonData = JSON.stringify(data2);
+console.log(jsonData);
+
+//JSON to Normal
+console.log(JSON.parse(jsonData));

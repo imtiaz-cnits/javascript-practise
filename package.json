@@ -1,0 +1,15 @@
+{
+  "name": "javascript-practise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "random-prctices.js",
+  "scripts": {
+    "server": "nodemon script"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

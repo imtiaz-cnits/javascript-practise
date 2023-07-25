@@ -37,3 +37,12 @@ developers
   .reverse();
 
 console.log(developers);
+
+//Array method - every and some
+const numb = [2, 6, 4, -9, 1, 3];
+
+const data = numb.every(function (port) {
+  return port > 0;
+});
+
+console.log(data);

@@ -69,3 +69,15 @@ const hello2 = [4, 5, 6];
 
 const total = [...hello1, ...hello2];
 console.log(total);
+
+// Joining an Array
+let ui = [1, 2, 3, 4];
+
+let joinArray = ui.join("-");
+console.log(joinArray);
+
+// Spliting an Array/string
+let message = "Hi I am Imtiaz";
+const arrayMessage = message.split(" ");
+
+console.log(arrayMessage);

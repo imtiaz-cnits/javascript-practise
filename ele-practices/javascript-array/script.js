@@ -46,3 +46,15 @@ const data = numb.every(function (port) {
 });
 
 console.log(data);
+
+// Array method - concat and slice
+const test1 = [1, 2, 3, 4];
+const test2 = [5, 6, 7];
+
+const sum = test1.concat(test2);
+console.log(sum);
+
+const test3 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const sliceArr = test3.slice(3, 6);
+console.log(sliceArr);

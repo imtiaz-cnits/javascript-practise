@@ -58,3 +58,14 @@ const test3 = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const sliceArr = test3.slice(3, 6);
 console.log(sliceArr);
+
+// Spread operator
+const anikaboss = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(...anikaboss);
+
+const hello1 = [1, 2, 3];
+const hello2 = [4, 5, 6];
+
+const total = [...hello1, ...hello2];
+console.log(total);

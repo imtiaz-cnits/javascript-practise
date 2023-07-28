@@ -81,3 +81,15 @@ let message = "Hi I am Imtiaz";
 const arrayMessage = message.split(" ");
 
 console.log(arrayMessage);
+
+// ES6 Features: Map
+let newArr = [1, 2, 3, 4, 5];
+
+// const mulByTwo = newArr.map(function (mapFunc) {
+//   return mapFunc * 2;
+// });
+
+// Using Arrow Function
+const mulByTwo = newArr.map((mapFunc) => mapFunc * 2);
+
+console.log(mulByTwo);

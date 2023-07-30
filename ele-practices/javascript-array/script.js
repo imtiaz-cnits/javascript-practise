@@ -93,3 +93,20 @@ let newArr = [1, 2, 3, 4, 5];
 const mulByTwo = newArr.map((mapFunc) => mapFunc * 2);
 
 console.log(mulByTwo);
+
+// ES6 Features: Filtering an Array
+let filArr = [1, 2, 3, 4, 5, 6];
+
+// let onlyOddNumber = [];
+
+// for (let filter of filArr) {
+//   if (filter % 2 !== 1) {
+//     onlyOddNumber.push(filter);
+//   }
+// }
+// console.log(onlyOddNumber);
+
+const onlyOddNumber = filArr.filter(function (filter) {
+  return filter % 2 === 1;
+});
+console.log(onlyOddNumber);

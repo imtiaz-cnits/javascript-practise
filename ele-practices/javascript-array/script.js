@@ -110,3 +110,20 @@ const onlyOddNumber = filArr.filter(function (filter) {
   return filter % 2 === 1;
 });
 console.log(onlyOddNumber);
+
+// ES6 Features: Reduce
+let math = [10, 20, 40];
+
+let mathsum = 0;
+
+for (let num0 of math) {
+  mathsum = mathsum + num0;
+}
+
+console.log(mathsum);
+
+const nums = math.reduce(function (mathsum, math) {
+  return mathsum + math;
+}, 0);
+
+console.log(nums);

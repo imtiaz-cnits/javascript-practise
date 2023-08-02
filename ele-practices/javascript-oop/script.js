@@ -32,3 +32,17 @@ var interface = function () {
 };
 
 console.log(interface());
+
+// Constructor Function
+
+function User(person, number) {
+  this.person = person;
+  this.number = number;
+  this.action = function () {
+    console.log("Fahad is running");
+  };
+  console.log(this);
+}
+
+const admin = new User("Fahad");
+console.log(admin);

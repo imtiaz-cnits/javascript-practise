@@ -6,4 +6,4 @@ function div(a, b) {
   return a / b;
 }
 
-console.log(div(6, 3));
+console.log(div(6, 0));

@@ -1,0 +1,13 @@
+import React from "react";
+import '../stylesheets/Book.css'
+
+const Book = props => {
+     return (
+          <div className="Book">
+               <h1 onClick={props.change} > Book : {props.bookName} </h1>
+               <h2>Writer: {props.writer} </h2>
+          </div>
+     )
+}
+
+export default Book;

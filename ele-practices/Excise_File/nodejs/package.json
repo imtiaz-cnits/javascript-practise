@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-basic",
+  "version": "1.0.0",
+  "description": "Learning node",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "keywords": [
+    "NodeJs"
+  ],
+  "author": "Kazi Ariyan",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
+}

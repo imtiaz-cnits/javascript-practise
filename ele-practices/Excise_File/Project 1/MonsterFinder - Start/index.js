@@ -1,23 +1,26 @@
 // I wish you good luck and happy coding 🥰🤠🥳🥳💯💯
-import { monsters } from "./monsters.js00";
+import { monsters } from "./monsters.js";
 console.log(monsters);
 
-showMonster();
-function showMonster() {
+for (let monsterDiv of monsters) {
+  showMonster(monsterDiv);
+}
+
+function showMonster(monsterDiv) {
   const monster = document.createElement("div");
   monster.className = "monster";
 
   const img = document.createElement("img");
-  img.src = "https://robohash.org/8?set=set2";
+  img.src = `https://robohash.org/${monsterDiv.id}?set=set2`;
   img.alt = "Kazi Ariyan";
 
   const mname = document.createElement("p");
   mname.className = "name";
-  mname.innerText = "Kazi Ariyan";
+  mname.innerText = monsterDiv.name;
 
   const email = document.createElement("email");
   email.className = "email";
-  email.innerText = "info@easylearningbd.com";
+  email.innerText = monsterDiv.email;
 
   monster.append(img, mname, email);
   document.querySelector(".monsters").append(monster);

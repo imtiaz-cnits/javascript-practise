@@ -50,3 +50,32 @@ function showError() {
           <h1>🧟‍♂️ No Monster Found 🧟‍♂️</h1>
         </div>
 */
+
+// Creating Monster Search Functionality
+document
+  .querySelector("#search-monster")
+  .addEventListener("keyup", function (e) {
+    const keyword = e.target.value.toLowerCase();
+
+    const findMonster = document.querySelectorAll(".monster");
+
+    let notFound = true;
+
+    for (let monster of findMonster) {
+      const name = monster.children[1].innerText.toLowerCase();
+      const email = monster.children[2].innerText.toLowerCase();
+
+      if (name.includes(keyword) || email.includes(keyword)) {
+        monster.style.display = "block";
+        notFound = false;
+      } else {
+        monster.style.display = "none";
+      }
+    }
+
+    if (notFound) {
+      document.querySelector(".not-found").style.display = "block";
+    } else {
+      document.querySelector(".not-found").style.display = "none";
+    }
+  });

@@ -51,29 +51,31 @@ function showError() {
         </div>
 */
 
-// Monster Searching System
-document.querySelector("#search-monster").addEventListener("keyup", (e) => {
-  const keyword = e.target.value.toLowerCase();
+// Creating Monster Search Functionality
+document
+  .querySelector("#search-monster")
+  .addEventListener("keyup", function (e) {
+    const keyword = e.target.value.toLowerCase();
 
-  const findMonster = document.querySelectorAll(".monster");
+    const findMonster = document.querySelectorAll(".monster");
 
-  let notFound = true;
+    let notFound = true;
 
-  for (let monster of findMonster) {
-    const name = monster.children[1].innerText.toLowerCase();
-    const email = monster.children[2].innerText.toLowerCase();
+    for (let monster of findMonster) {
+      const name = monster.children[1].innerText.toLowerCase();
+      const email = monster.children[2].innerText.toLowerCase();
 
-    if (name.includes(keyword) || email.includes(keyword)) {
-      monster.style.display = "block";
-      notFound = false;
-    } else {
-      monster.style.display = "none";
+      if (name.includes(keyword) || email.includes(keyword)) {
+        monster.style.display = "block";
+        notFound = false;
+      } else {
+        monster.style.display = "none";
+      }
     }
-  }
 
-  if (notFound) {
-    document.querySelector(".not-found").style.display = "block";
-  } else {
-    document.querySelector(".not-found").style.display = "none";
-  }
-});
+    if (notFound) {
+      document.querySelector(".not-found").style.display = "block";
+    } else {
+      document.querySelector(".not-found").style.display = "none";
+    }
+  });

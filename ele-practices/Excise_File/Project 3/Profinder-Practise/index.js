@@ -14,19 +14,30 @@ async function getRepos(profile) {
     `${profile.repos_url}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&per_page=10`
   );
   const repos = await res.json();
-  console.log(repos);
   return repos;
 }
 
 document.querySelector("#search").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const username = document.querySelector("#findByUsername").value;
-  const profile = await getUser(username);
-  const repos = await getRepos(profile);
 
-  showUserProfile(profile);
-  showRepos(repos);
-  console.log(profile);
+  const username = document.querySelector("#findByUsername").value;
+
+  if (username.length > 0) {
+    document.querySelector(".loader").style.display = "block";
+    document.querySelector(".user-details").style.display = "none";
+    document.querySelector(".notFound").style.display = "none";
+    const profile = await getUser(username);
+    document.querySelector(".loader").style.display = "none";
+
+    if (profile.message === "Not Found") {
+      document.querySelector(".notFound").style.display = "block";
+    } else {
+      const repos = await getRepos(profile);
+      document.querySelector(".user-details").style.display = "flex";
+      showUserProfile(profile);
+      showRepos(repos);
+    }
+  }
 });
 
 function showUserProfile(profile) {

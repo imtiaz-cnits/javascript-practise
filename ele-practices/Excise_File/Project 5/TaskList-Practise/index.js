@@ -1,1 +1,3 @@
-// I wish you good luck and happy coding 🥰🤠🥳🥳💯💯
+// Task (id, title, isComplete)
+// UI
+// localstorage

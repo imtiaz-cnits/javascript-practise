@@ -1,12 +1,12 @@
 import LS from "./ls.js";
 
-function UI() {
-  const ls = new LS();
+function UI() {}
+const ls = new LS();
 
-  UI.prototype.addToUI = function (task) {
-    ls.storeTask(task);
+UI.prototype.addToUI = function (task) {
+  ls.storeTask(task);
 
-    let newHtml = `
+  let newHtml = `
     <div class="task" data-createdat="${task.id}">
       <div class="task__details">
         <input type="checkbox" class="task-check" />
@@ -18,22 +18,25 @@ function UI() {
         <ion-icon class="task__op_delete" name="trash-outline"></ion-icon>
       </div>
     </div>`;
-    document
-      .querySelector(".task-list")
-      .insertAdjacentHTML("afterbegin", newHtml);
-  };
-  UI.prototype.resetForm = function () {
-    document.querySelector("#newtaskID").value = "";
-  };
-}
+  document
+    .querySelector(".task-list")
+    .insertAdjacentHTML("afterbegin", newHtml);
+};
+UI.prototype.resetForm = function () {
+  document.querySelector("#newtaskID").value = "";
+};
 
 UI.prototype.deleteTask = function (e) {
   const task = e.target.parentElement.parentElement;
+  const id = task.dataset.createdat;
+  ls.deleteTask(id);
   task.remove();
 };
 
 UI.prototype.completeTask = function (e) {
   const task = e.target.parentElement.parentElement;
+  const id = task.dataset.createdat;
+  ls.completeTask(id);
   task.classList.toggle("completed");
 };
 

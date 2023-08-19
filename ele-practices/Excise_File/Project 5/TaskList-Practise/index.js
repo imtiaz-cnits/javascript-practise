@@ -3,6 +3,8 @@ import UI from "./ui.js";
 
 const ui = new UI();
 
+ui.showAllTask();
+
 document.querySelector(".AddTaskBtn").addEventListener("click", (e) => {
   const addTask = document.querySelector("#newtaskID").value;
 
@@ -14,6 +16,10 @@ document.querySelector(".AddTaskBtn").addEventListener("click", (e) => {
 });
 
 document.querySelector(".task-list").addEventListener("click", (e) => {
+  if (e.target.className.includes("task__op_edit")) {
+    ui.editTask(e);
+  }
+
   if (e.target.className.includes("task__op_delete")) {
     ui.deleteTask(e);
   }
@@ -21,4 +27,12 @@ document.querySelector(".task-list").addEventListener("click", (e) => {
   if (e.target.className.includes("task-check")) {
     ui.completeTask(e);
   }
+});
+
+document.querySelector(".EditTaskBtn").addEventListener("click", (e) => {
+  ui.updateTask(e);
+});
+
+document.querySelector(".CancelTaskBtn").addEventListener("click", (e) => {
+  ui.cancelTask(e);
 });

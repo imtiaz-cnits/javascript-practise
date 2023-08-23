@@ -1,27 +1,53 @@
-const add = require("./calculator/add");
-const sub = require("./calculator/sub");
-const mul = require("./calculator/mul");
-const div = require("./calculator/div");
+// File system module
+// const fs = require("fs").promises;
 
-// console.log(add(5, 6));
-// console.log(sub(13, 6));
-// console.log(mul(5, 6));
-// console.log(div(12, 6));
+// Create file
+// fs.writeFile("./app.txt", "This is a Node Module .txt File", (err) => {
+//   if (err) console.log(err);
+//   else console.log("File created successfully");
+// });
 
-const a = parseInt(process.argv[2]);
-const oprt = process.argv[3];
-const b = parseInt(process.argv[4]);
+// Read File
+// fs.readFile("./app.txt", "utf-8", (err, data) => {
+//   if (err) console.log(err);
+//   else console.log(data);
+// });
 
-console.log(a, oprt, b);
+// Rename file
+// fs.rename("./app.txt", "./helper.txt", (err) => {
+//   if (err) console.log(err);
+//   else console.log("File Renamed Successfully");
+// });
 
-if (oprt === "+") {
-  console.log(add(a, b));
-} else if (oprt === "-") {
-  console.log(sub(a, b));
-} else if (oprt === "*") {
-  console.log(mul(a, b));
-} else if (oprt === "/") {
-  console.log(div(a, b));
-} else {
-  console.log("Invalid");
-}
+// Delete File
+// fs.unlink("./helper.txt", (err) => {
+//   if (err) console.log(err);
+//   else console.log("File Deleted Successfully");
+// });
+
+// Read and Write Exercise
+// async function getSum() {
+//   let data = await fs.readFile("./data.json", "utf-8");
+//   data = JSON.parse(data);
+
+//   let sum = 0;
+//   for (let user of data) {
+//     sum = sum + user.salary;
+//   }
+//   console.log(sum);
+// }
+// getSum();
+
+// <---------------------- -------------------->
+
+// HTTP Method
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  console.log("Server Is Now Running");
+
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("<h1> Hi, This is Node.js HTTP Server");
+});
+
+server.listen(3000);

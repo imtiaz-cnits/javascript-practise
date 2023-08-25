@@ -58,13 +58,21 @@
 // read html file
 // send this data as a response from server
 
-const http = require("http");
-const fs = require("fs").promises;
+// const http = require("http");
+// const fs = require("fs").promises;
 
-const server = http.createServer(async (req, res) => {
-  const data = await fs.readFile("./new.html");
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.end(data);
-});
+// const server = http.createServer(async (req, res) => {
+//   const data = await fs.readFile("./new.html");
+//   res.writeHead(200, { "Content-Type": "text/html" });
+//   res.end(data);
+// });
 
-server.listen(3000);
+// server.listen(3000);
+
+// <---------------------- -------------------->
+// NPM Module
+// var validator = require("validator");
+
+// console.log(validator.isEmail("ia64744@gmail.com"));
+// console.log(validator.isJSON(JSON.stringify({ name: "imtiaz" })));
+// console.log(validator.isPort("3000"));

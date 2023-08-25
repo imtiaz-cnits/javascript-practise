@@ -41,13 +41,30 @@
 // <---------------------- -------------------->
 
 // HTTP Method
+// const http = require("http");
+
+// const server = http.createServer((req, res) => {
+//   console.log("Server Is Now Running");
+
+//   res.writeHead(200, { "Content-Type": "text/html" });
+//   res.end("<h1> Hi, This is Node.js HTTP Server</h1>");
+// });
+
+// server.listen(3000);
+
+// <---------------------- -------------------->
+
+// create new server
+// read html file
+// send this data as a response from server
+
 const http = require("http");
+const fs = require("fs").promises;
 
-const server = http.createServer((req, res) => {
-  console.log("Server Is Now Running");
-
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("<h1> Hi, This is Node.js HTTP Server");
+const server = http.createServer(async (req, res) => {
+  const data = await fs.readFile("./new.html");
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(data);
 });
 
 server.listen(3000);

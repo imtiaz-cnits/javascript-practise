@@ -13,4 +13,10 @@ app.get('/about', (req,res) => {
   });
 });
 
+app.post('/login', (req,res) => {
+  console.log(req.body);
+
+  res.send("User Login Successfully");
+})
+
 app.listen('8080', () => console.log('Server is Running at port 8080'));

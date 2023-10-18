@@ -16,30 +16,42 @@
       </nav>
 
       <div class="bicycleShop">
+
+        <% for (let cycle of bicycles) { %>
+
         <div class="bicycle">
           <div class="bicycle__image">
-            <img src="/images/0.png" alt="Hercules Roadeo A50" />
+            <img src="/images/<%= cycle.image %>" alt="<%= cycle.name %>" />
           </div>
         
           <div class="bicycle__name">
-            <a href="/bicycle?id=0">Hercules Roadeo A50</a>
+            <a href="/bicycle?id=<%= cycle.id %>"><%= cycle.name %></a>
           </div>
         
           <div class="bicycle__rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+
+            <% for (let index = 0; index < cycle.star; index++) { %>
+              <span class="fa fa-star checked"></span>
+            <% } %>
+
+            <% for (let index = 0; index < 5 - cycle.star; index++) { %>
+              <span class="fa fa-star"></span>
+            <% } %>
+            
           </div>
         
           <div class="bicycle__price">
-            <p class="current_price">$3000.00</p>
-            <p class="old_price">$4000</p>
+            <p class="current_price">$<%= cycle.originalPrice %></p>
+            <p class="old_price">$<%= cycle.originalPrice %></p>
           </div>
-        
-          <div class="discount__rate"><p>40% Off</p></div>
+          
+          <% if (cycle.hasDiscount) { %>
+            <div class="discount__rate"><p><%= cycle.discount %>% Off</p></div>
+          <% } %>
         </div>
+
+        <% } %>
+
       </div>
     </div>
   </body>

@@ -70,6 +70,18 @@ app.post('/api/products', (req, res) => {
 
 
 // Update specific product data (Using PUT method)
+app.put('/api/products/:id', (req, res) =>{
+    const {error} = schema.validate(req.body);
+
+    if (error) {
+        return res.status(400).json({
+            message: error.details[0].message
+        });
+    }
+})
+
+
+
 // Update specific product data (Using PATCH method)
 // Delete a specific product data
 // Delete all products data

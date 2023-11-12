@@ -93,8 +93,29 @@ app.put('/api/products/:id', (req, res) =>{
 })
 
 
-
 // Update specific product data (Using PATCH method)
+app.patch('/api/products/:id', (req, res) => {
+    const index = products.findIndex(prod => prod.id === req.params.id);
+
+    if(index === -1){
+        return res.status(404).json({
+            message: 'Product is not found with this ID.'
+        });
+    }
+
+    let updateProduct = {
+        ...products[index],
+        ...req.body
+    }
+
+    products[index] = updateProduct;
+    return res.json(updateProduct);
+
+});
+
+
+
+
 // Delete a specific product data
 // Delete all products data
 

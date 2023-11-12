@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const Joi = require('joi');
 
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4, validate } = require('uuid');
 
 app.get('/', (req, res) => {
     res.send('Imtiaz is Web Developer');
@@ -46,12 +46,7 @@ app.use(express.json());
 
 app.post('/api/products', (req, res) => {
 
-    const schema = Joi.object({
-        name: Joi.string().min(3).max(20).required(),
-        price: Joi.number().required()
-    });
-
-    const {error} = schema.validate(req.body);
+    const {error} = validation(req.body);
 
     if (error) {
         return res.status(400).json({
@@ -69,15 +64,32 @@ app.post('/api/products', (req, res) => {
 });
 
 
-// Update specific product data (Using PUT method)
+// Update All product data (Using PUT method)
 app.put('/api/products/:id', (req, res) =>{
-    const {error} = schema.validate(req.body);
+
+    const {error} = validation(req.body);
 
     if (error) {
         return res.status(400).json({
             message: error.details[0].message
         });
+    };
+
+    const index = products.findIndex(prod => prod.id === req.params.id);
+
+    if(index === -1){
+        return res.status(404).json({
+            message: "Product is not found with this ID."
+        })
     }
+
+    products[index].name = req.body.name;
+    products[index].price = req.body.price;
+
+    return res.json({
+        product : products[index]
+    });
+
 })
 
 
@@ -85,6 +97,15 @@ app.put('/api/products/:id', (req, res) =>{
 // Update specific product data (Using PATCH method)
 // Delete a specific product data
 // Delete all products data
+
+function validation(body) {
+    const schema = Joi.object({
+        name: Joi.string().min(3).max(20).required(),
+        price: Joi.number().required()
+    });
+
+    return schema.validate(body);
+}
 
 
 app.listen(3000, () => console.log('Server is running at port 3000'));

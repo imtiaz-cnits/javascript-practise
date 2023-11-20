@@ -114,10 +114,16 @@ app.patch('/api/products/:id', (req, res) => {
 });
 
 
-
-
 // Delete a specific product data
+app.delete('/api/products/:id', (req, res) => {
+
+});
+
+
 // Delete all products data
+
+
+
 
 function validation(body) {
     const schema = Joi.object({
@@ -127,6 +133,5 @@ function validation(body) {
 
     return schema.validate(body);
 }
-
 
 app.listen(3000, () => console.log('Server is running at port 3000'));

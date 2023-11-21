@@ -116,12 +116,24 @@ app.patch('/api/products/:id', (req, res) => {
 
 // Delete a specific product data
 app.delete('/api/products/:id', (req, res) => {
+    const product = products.find(prod => prod.id === req.params.id);
+    if(!product){
+        return res.status(404).json({
+            message: 'Product is Not Found with This ID.'
+        });
+    }
 
+    const index = products.findIndex(prod => prod.id === req.params.id);
+    products.splice(index, 1);
+    return res.json(product);
 });
 
 
 // Delete all products data
-
+app.delete('/api/products', (req,res) => {
+    products.splice(0);
+    return res.json(products);
+})
 
 
 

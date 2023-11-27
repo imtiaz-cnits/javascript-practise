@@ -19,9 +19,10 @@ const User = mongoose.model('User', userSchema);
 // Sort them by name
 
 async function query(){
-    const users = await User.findById('6027d1fd8d4a543a2049d1a0');
-    users.isMarried = true;
-    users.save();
+    const users = await User.findByIdAndUpdate('6027d1fd8d4a543a2049d1a0' ,
+        { age: 35, isMarried: false } , { new: true, runValidators: true }
+    );
+    
 
     console.log(users);
 }

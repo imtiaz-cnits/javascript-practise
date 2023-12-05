@@ -1,0 +1,117 @@
+197. Connecting to MongoDB - 
+	01. create project folder
+	02. Run npm init -y
+	03. Run npm i mongoose
+	04. create index.js file
+	05. connect mongoose here using doc
+
+198. Schema and Models - 
+	Combining multiple objects called collections, combining multiple collections 	called database
+
+	schema is a shape of a document
+
+	01. create mongoose schema
+	02. create mongoose model
+
+199. Create and Save a document in MongoDB
+	01. create a functional object
+
+200. Find documents in multiple ways
+	01. Import data from a json file in MongoDB app
+	02. create async function to fetch all data from Database
+
+	(Finds a single documents by its _id field. findById(id) is almost equivalent 	to findOne({ _id: id }). If you want to query a document's _id, use findById() 	instead of findOne().
+
+201. Query API Select, Sort, Limit, Count Documents
+	01. using select() method
+	02. sort() method - ascending & dscending order
+	03. limit() method
+	04. countDocuments() method
+
+202. Complex Query Comparison Operators
+	01. Operators -
+		eq, ne, gt, gte, lt, lte, in, nin
+
+203. Complex Query And, Or Operations
+
+204. Exercise Advanced Query
+
+205. Update a document (way 1)
+	findById() method
+
+206. Update a document (way 1)
+	findByIdAndUpdate() method
+
+207. Delete documents in 3 ways
+	deleteOne({ _id: 'id' })
+	deleteMany()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rahat -     Roll 602584 	Reg 2600912614 
+
+Foisal -    Roll 602585		Reg 2600912615
+
+Meherin -   Roll 116632 	Reg 1812721728
+
+Robi -      Roll 404497		Reg 2700465016
+
+Rakib -     Roll 601517		Reg 1712715815
+
+
+
+
+
+
+
+
+
+Stapler
+Pin
+Punch Machine
+Scissor
+Anti-Cutter
+CD Marker
+Fevicol MR
+Pencil Sharpner
+Eraser
+Pencil
+Pen
+Red Pen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

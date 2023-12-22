@@ -1,3 +1,9 @@
 Project 9:
 
-209: Mongoose Connection, Create User and Task Model with Proper Folder Structure -
+209. Mongoose Connection, Create User and Task Model with Proper Folder Structure -
+    1. Create folder, install package.json by running command 'npm init -y'
+    2. install Mongoose with command 'npm i mongoose'
+    3. connect project with mongoose server and creating own server
+    5. add then() and catch() method to show Connection message and errors
+    5. run using 'npm index'
+    6. creating schema

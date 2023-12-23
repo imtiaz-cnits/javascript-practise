@@ -6,4 +6,14 @@ Project 9:
     3. connect project with mongoose server and creating own server
     5. add then() and catch() method to show Connection message and errors
     5. run using 'npm index'
-    6. creating schema
+    6. creating userSchema with field - name, age, email, password
+    7. create model for userSchema named User
+    8. create taskSchema with field - description and isCompleted
+    9. create model for taskSchema named Task
+    10. create a folder named 'model'
+    11. create two js file named 'user.js' and 'task.js' into 'model' folder
+    12. move 'userSchema' code from index.js to user.js file
+    13. move 'taskSchema' code from index.js to task.js file
+    14. export both file and import them into index.js
+
+210. 

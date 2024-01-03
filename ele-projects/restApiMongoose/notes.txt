@@ -1,4 +1,4 @@
-Project 9:
+Project 9: All in One (REST API and Mongoose)
 
 209. Mongoose Connection, Create User and Task Model with Proper Folder Structure -
     1. Create folder, install package.json by running command 'npm init -y'
@@ -16,4 +16,14 @@ Project 9:
     13. move 'taskSchema' code from index.js to task.js file
     14. export both file and import them into index.js
 
-210. 
+210. Data Validation and Sanitization in User Model Part 1
+    01. Set Validation to name field using object - type, minLength, maxLength, require
+    02. Set Validation to age field using object - type and custom Validation using validate(value) with if conditions
+    03. For email Validation install validator package using 'npm i validator', then import validator on 'user.js' file using require() method.
+    04. Then Set Validation to email field using object - type and custom Validation using validator.isEmail(value) with if conditions
+    05. Set Validation to password field using object - type, require
+    06. To check all validation create a async function named db(), and add try() and catch() method
+    07. In try() method, take a variable named user and pass all data like name, age, email and password there.
+    08. Use await() to save data in mongodb
+    09. do console.log(user)
+    10. In catch() pass some err message

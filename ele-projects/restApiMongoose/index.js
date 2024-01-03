@@ -4,3 +4,19 @@ mongoose.connect('mongodb://127.0.0.1:27017/task').then(() => console.log('Datab
 const User = require('./model/user');
 const Task = require('./model/task');
 
+async function db() {
+    try {
+        const user = new User ({
+            name: 'Imtiaz',
+            age: 28,
+            email: 'imtiaz@email.com',
+            password: '12345'
+        });
+        await user.save();
+        console.log(user);
+    }
+    catch(e) {
+        console.log(e.message);
+    }
+}
+db();

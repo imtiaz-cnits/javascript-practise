@@ -27,3 +27,9 @@ Project 9: All in One (REST API and Mongoose)
     08. Use await() to save data in mongodb
     09. do console.log(user)
     10. In catch() pass some err message
+
+211. Data Validation and Sanitization in User Model Part 2
+    01. for changing error message color in terminal for output, run 'npm i colors' and import colors in 'index.js'
+    02. Sanitization: use 'trim: true' method to automatically cut spaces from strings before saving into database
+    03. use 'unique: true' method to auto check if the mail is repeated or not and use 'lowercase: true' to ignore all uppercase to input
+    04. 

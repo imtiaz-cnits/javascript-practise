@@ -9,7 +9,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/task').then(() => console.log('Datab
 const User = require('./model/user');
 const Task = require('./model/task');
 
-const port = process.port.env || 4040;
+const port = process.port.env || 27017;
 app.listen(port, () => console.log(`Server is running at port ${port}`));
 
 async function db() {

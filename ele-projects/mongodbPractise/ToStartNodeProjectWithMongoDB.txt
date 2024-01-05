@@ -24,7 +24,7 @@
 
 201. Query API Select, Sort, Limit, Count Documents
 	01. using select() method
-	02. sort() method - ascending & dscending order
+	02. sort() method - ascending & descending order
 	03. limit() method
 	04. countDocuments() method
 

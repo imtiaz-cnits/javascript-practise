@@ -32,4 +32,8 @@ Project 9: All in One (REST API and Mongoose)
     01. for changing error message color in terminal for output, run 'npm i colors' and import colors in 'index.js'
     02. Sanitization: use 'trim: true' method to automatically cut spaces from strings before saving into database
     03. use 'unique: true' method to auto check if the mail is repeated or not and use 'lowercase: true' to ignore all uppercase to input
-    04. 
+
+212. Data validation and Sanitization in Task Model
+    01. In task model, set validation to description field using type, required method and Sanitization using trim method.
+    02. set validation to isCompleted using type and Sanitization using default method.
+    03. set values same as user model in 'index.js' on try() and catch() method, to see the result.

@@ -37,3 +37,9 @@ Project 9: All in One (REST API and Mongoose)
     01. In task model, set validation to description field using type, required method and Sanitization using trim method.
     02. set validation to isCompleted using type and Sanitization using default method.
     03. set values same as user model in 'index.js' on try() and catch() method, to see the result.
+
+213. REST API Design with Express
+    01. install express.js by running 'npm i express'
+    02. import express to index
+    03. add express using express app
+    04. add port for the app by using 'const port = process.port.env || 4040'

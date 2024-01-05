@@ -1,9 +1,16 @@
+const express = require('express');
 const mongoose = require('mongoose');
 const colors = require('colors');
+
+const app = express();
+
 mongoose.connect('mongodb://127.0.0.1:27017/task').then(() => console.log('Database is Connected...')).catch((err) => console.error(err));
 
 const User = require('./model/user');
 const Task = require('./model/task');
+
+const port = process.port.env || 4040;
+app.listen(port, () => console.log(`Server is running at port ${port}`));
 
 async function db() {
     try {
